@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git and Github</title>
+</head>
+
+<body>
+    <div class="main-div">
+        <h1 class="title">The beginner's guide to Git & GitHub</h1>
+        <h2>What is Git?</h2>
+        <p class="para">Git is a version control tool (software) to track the changes in the source code.</p>
+        <h2>What is version control System?</h2>
+        <p class="para">Version Control Systems are the software tools for tracking/managing all the changes made to the source code during the project development. It keeps a record of every single change made to the code. It also allows us to turn back to the previous
+            version of the code if any mistake is made in the current version. Without a VCS in place, it would not be possible to monitor the development of the project.</p>
+        <h2>What is github?</h2>
+        <p class="para">GitHub is a web-based cloud service to host your source code(Git repositories). It is a centralized system. Git doesn't specifically require GitHub but GitHub requires Git.</p>
+        <h2>Installation of Git:</h2>
+        <h4 class="para"><a href="https://git-scm.com/download/win" target="_blank">Git Installation for windows</a>
+        </h4>
+        <h4 class="para"><a href="https://git-scm.com/download/linux" target="_blank">Git Installation for Linux</a></h4>
+        <h4 class="para"><a href="https://git-scm.com/download/mac" target="_blank">Git installation for MacOS</a></h4>
+        <h2>1) Creating local repositories:</h2>
+        <p class="para">After installing Git, the first thing you wish to do is to create a local repository. Its preety simple. Go to your current working directory, let say it is 'My first Project' present inside Desktop.</p>
+        <ol class="list">
+            <li>In your current working directory Right click anywhere and open 'git bash here'</li>
+            <li>Type <b class="cmd">git init</b> . This will initialize or create a new repository inside your current working directory. You will see '.git' folder inside current working directory. If you don't get such folder just go to 'view' and select
+                'show hidden items'.
+            </li>
+        </ol>
+        <h2>2) Adding and commiting files to local repositories:</h2>
+        <ol class="list">
+            <li>Type <b class="cmd">git add .</b> to add all the files that are present in your current working dirctory. Or<br>Type <b class="cmd">git add (filename)</b> to add a specific file to your local repository. Example: <b class="cmd">git add main.py</b>
+            </li>
+            <li>Type <b class="cmd">git commit -m "msg"</b>. This will save all the changes made to your repository. Example: <b class="cmd">git commit -m "my first commit"</b></li>
+        </ol>
+        <h2>3) Check status of your local repository:</h2>
+        <ol class="list">
+            <li>Type <b class="cmd">git status</b>. This will show you the current status of your local repository like whether there are any files that are present in your current working directory but not part of your local repository or not. </li>
+        </ol>
+        <h2>4) Making branches of your Base Branch (Master Branch):</h2>
+        <p class="para">Making branching of your master branch have multiple puposes and advantages like it helps us to keep track of progress of our project. If anything bad happens during development you can easily roll back to previous version by looking up that branch.
+            It also helps you if are working under a team and each member is assigned specific tasks then each member can commit his work in a seperate branch and then merging all those branches to the master branch.</p>
+        <ol class="list">
+            <li>Type <b class="cmd">git branch (branch name)</b>. This will create a new branch.</li>
+            <li>Type <b class="cmd">git checkout (branch name)</b>. to jump to that specific branch.</li>
+            <li>Repeat step 2 (Adding and commiting files to local repositories) to add files into that branch.</li>
+        </ol>
+        <h2>5) Copy the contents of a specific branch to current branch:</h2>
+        <ol class="list">
+            <li>Type <b class="cmd">git merge (branch name)</b>.
+                <br> Example: Suppose we have two branches one is "master" and other is "Models" and currently we are in master branch and we want to copy the contents of "Models" branch , run <b class="cmd">git merge Models</b></li>
+        </ol>
+        <h2>6) Working with github repositories</h2>
+        <p class="para">Till now we have been adding and comming files into our our local repositories. Lets have a look how can we manage our Github repositories.</p>
+        <h3>6.1) Pushing your code to github repository:</h3>
+        <ol class="list">
+            <li>First goto github.com and create a new repository.</li>
+            <li>On git Bash, type <b class="cmd">git remote add origin git@github.com:username/repositoryname.git</b> This will link your github repository with your local repository.</li>
+            <li>Type <b class="cmd">git push -u origin (branch name)</b>. This will create a branch in your github repository, if not already exists, under the name of your local branch and push all the files to that branch.</li>
+        </ol>
+        <h3>6.2) Cloning or Downloading github repository to your local machine:</h3>
+        <ol class="list">
+            <li>Open any folder where you wish to download the files.</li>
+            <li>Right click anywhere and open 'git bash here'</li>
+            <li>Type <b class="cmd">git init</b></li>
+            <li>Type <b class="cmd">git pull htttps://github.com/username/repositoryname.git</b>. This will download all the files of main branch of given repository to your local computer.</li>
+        </ol>
+    </div>
+</body>
+
+</html>
