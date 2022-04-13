@@ -1,0 +1,17 @@
+1) git init
+2) git status
+3) git add . 
+4) git add filename
+5) git config --global user.name "your name"
+6) git config --global user.email "your email"
+7) git commit -m "msg"
+
+8) git branch branchName
+9) git checkout branchName
+
+10) git merge branchName
+
+11) git remote add origin https://github.com/username/repositoryName
+12) git push origin branchName
+
+13) git pull https://github.com/username/repositoryName
